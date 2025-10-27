@@ -46,4 +46,5 @@ for sample in samples:
     adata_list.append(ad)
 
 data_all = anndata.concat(adata_list)
+data_all.obs_names_make_unique()
 data_all.write_h5ad("_processData/data_all.h5ad")
